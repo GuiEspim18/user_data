@@ -99,6 +99,10 @@ fun Greeting() {
     var opSystems by remember {
         mutableStateOf(-1)
     }
+
+    var color by remember {
+        mutableStateOf(Color(0xFFFF5500))
+    }
     
     Column (
         modifier = Modifier.
@@ -233,10 +237,10 @@ fun Greeting() {
         ) {
             Button(
                 onClick = {
-                    
+                    color = Color.Cyan
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFFF5500),
+                    containerColor = color,
                     contentColor = Color(0xFFF0F0F0)
                 ),
                 modifier = Modifier
